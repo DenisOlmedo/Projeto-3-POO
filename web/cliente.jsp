@@ -13,38 +13,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    
   </head>
   <body>
-    <h1>Cadastro Cliente</h1>
+      <h1 style="text-align: center">Cadastro Cliente</h1>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
-    <div>
+    <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
+        <div class= "jumbotron ">
         <form>
           <fieldset>
             
-            <p>Nome</p>
-            <input type="text" name="nome" value="" placeholder="Type something…">
-            <p>CPF</p>
-            <input type="text" name="cpf" value="" placeholder="Type something…">
-            <p>RG</p>
-            <input type="text" name="rg" value="" placeholder="Type something…">
-            <p>Email</p>
-            <input type="text" name="email" value="" placeholder="Type something…">
-            <p>Telefone</p>
-            <input type="text" name="telefone" value="" placeholder="Type something…">
-            <p>Endereço</p>
-            <input type="text" name="endereco" value="" placeholder="Type something…">
-            
-            <label class="checkbox">
-              <input type="checkbox"> Check me out
-            </label>
-            <button type="submit" class="btn">Cadastrar</button>
+            <h3>Nome :    
+                <input type="text" name="nome" value="" placeholder="Type something…"></h3>
+              <br>
+            <h3>CPF :
+                <input type="text" name="cpf" value="" placeholder="Type something…"> </h3>
+              <br>
+            <h3>RG :
+                <input type="text" name="rg" value="" placeholder="Type something…"></h3>
+            <br>
+            <h3>Email :
+                <input type="text" name="email" value="" placeholder="Type something…"></h3>
+            <br>
+            <h3>Telefone :
+                <input type="text" name="telefone" value="" placeholder="Type something…"></h3>
+            <br>
+            <h3>Endereço :
+                <input type="text" name="endereco" value="" placeholder="Type something…"></h3>
+           
+            <button type="submit" class="btn btn-inverse">Cadastrar</button>
           </fieldset>
         </form>
         
     </div>
+    </div>
+    <br>
+    <br>
     
+    <%@include file="WEB-INF/jspf/footer.jspf" %>
   </body>
 </html>
-<%@include file="WEB-INF/jspf/footer.jspf" %>
