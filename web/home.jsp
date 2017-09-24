@@ -13,5 +13,7 @@
     <h1>Hello, world!</h1>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+   <%@include file="WEB-INF/jspf/footer.jspf" %>
   </body>
 </html>
+
