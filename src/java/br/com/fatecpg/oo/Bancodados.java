@@ -12,11 +12,22 @@ package br.com.fatecpg.oo;
 
 import java.util.ArrayList;
 public class Bancodados {
-    private static ArrayList<Cliente> cadastrocliente;  
+    
+   private static ArrayList<Cliente> cadastrocliente;  
+   private static ArrayList<Fornecedor> fornecedores;
+    
+   
   public static ArrayList<Cliente> getcadastrocliente(){
       if(cadastrocliente==null){
           cadastrocliente = new ArrayList<>();
       }
       return cadastrocliente;
   }
+  
+    public static ArrayList<Fornecedor> getFornecedor(){
+        if(fornecedores==null){
+            fornecedores = new ArrayList<>();
+        }
+        return fornecedores;
+    }
 }
