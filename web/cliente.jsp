@@ -44,9 +44,8 @@
          }else if(request.getParameter("remove")!=null){
              int i=Integer.parseInt(request.getParameter("i"));
             Bancodados.getcadastrocliente().remove(i);
-        }} catch(Exception ex){ %>
-    <div> *erro ao processar o comando:<%=ex.getMessage()%></div>
-       <% }  %>
+        }%>
+    
     
     <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
         <div class= "jumbotron ">
@@ -118,8 +117,12 @@
                                 
             </table>   
                 <%}%> 
+                
              </div>
     </div>
+                <%}catch(Exception ex){%>
+            <div>Erro ao Processar o comando: <%=ex.getMessage()%></div>
+        <%}%>
     
     <%@include file="WEB-INF/jspf/footer.jspf" %>
   </body>
