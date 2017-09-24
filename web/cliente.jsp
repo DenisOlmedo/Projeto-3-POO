@@ -4,6 +4,8 @@
     Author     : dolmedo
 --%>
 
+<%@page import="br.com.fatecpg.oo.Cliente"%>
+<%@page import="br.com.fatecpg.oo.Bancodados"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,6 +21,32 @@
       <h1 style="text-align: center">Cadastro Cliente</h1>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
+     <%try{
+         if (request.getParameter("enviar")!=null){
+            String nome= request.getParameter("nome");
+            String cpf= request.getParameter("cpf");
+            String rg= request.getParameter("rg");
+            String email= request.getParameter("email");
+            String telefone= request.getParameter("telefone");
+            String endereco= request.getParameter("endereco");
+            
+            Cliente o= new Cliente();
+            o.setNome(nome);
+            o.setCpf(cpf);
+            o.setRg(rg);            
+            o.setEmail(email);
+            o.setTelefone(telefone);
+            o.setEndereco(endereco);
+            
+            Bancodados.getcadastrocliente().add(o);
+            
+         }else if(request.getParameter("remove")!=null){
+             int i=Integer.parseInt(request.getParameter("i"));
+            Bancodados.getcadastrocliente().remove(i);
+        }} catch(Exception ex){ %>
+    <div> *erro ao processar o comando:<%=ex.getMessage()%></div>
+       <% }  %>
     
     <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
         <div class= "jumbotron ">
@@ -47,6 +75,42 @@
           </fieldset>
         </form>
         
+            <h2>Lista</h2>
+            <table border="1">
+                <tr>
+                    <th>Indice</th>
+                    <th>Nome </th>
+                    <th>CPF </th>
+                    <th>RG </th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Exclusao</th>
+                </tr>
+                                                
+                <% for(int i=0; i<Bancodados.getcadastrocliente().size();i++){ %>
+                <% Cliente o = Bancodados.getcadastrocliente().get(i);%>
+                <tr>
+                    <td><%=i%></td>
+                    <td><%=o.getNome()%></td>
+                    <td><%=o.getCpf()%></td>
+                    <td><%=o.getRg()%></td>
+                    <td><%=o.getEmail()%></td>
+                    <td><%=o.getTelefone()%></td>
+                    <td><%=o.getEndereco()%></td>
+                    
+                    <td>
+                        <form>
+                            <input type="hidden" name="i" value="<%=i%>"/>
+                            <input type="submit" name="remove" value="Excluir"/>
+                            
+                        </form>
+                    </td>
+                </tr>
+                                
+                
+                <%}%> 
+            
     </div>
     </div>
     <br>
