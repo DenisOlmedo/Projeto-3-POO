@@ -71,12 +71,20 @@
             <h3>Endereço :
                 <input type="text" name="endereco" value="" placeholder="Type something…"></h3>
            
-            <button type="submit" class="btn btn-inverse">Cadastrar</button>
+            <button type="submit" class="btn btn-inverse" name="enviar">Cadastrar</button>
           </fieldset>
         </form>
-        
+            
+           </div>
+    </div>
+    <br>
+    <br> 
+            <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
+        <div class= "jumbotron ">
+            
             <h2>Lista</h2>
-            <table border="1">
+           
+            <table align="center" border="1" class=" table table-striped" >
                 <tr>
                     <th>Indice</th>
                     <th>Nome </th>
@@ -108,13 +116,10 @@
                     </td>
                 </tr>
                                 
-                
+            </table>   
                 <%}%> 
-            
+             </div>
     </div>
-    </div>
-    <br>
-    <br>
     
     <%@include file="WEB-INF/jspf/footer.jspf" %>
   </body>
