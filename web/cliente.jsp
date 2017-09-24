@@ -48,7 +48,7 @@
     
     
     <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
-        <div class= "jumbotron ">
+      <div class= "jumbotron ">
         <form>
           <fieldset>
             
@@ -74,16 +74,16 @@
           </fieldset>
         </form>
             
-           </div>
+      </div>
     </div>
     <br>
     <br> 
-            <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
-        <div class= "jumbotron ">
+        <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
+          <div class= "jumbotron ">
             
             <h2>Lista</h2>
            
-            <table align="center" class=" table table-striped"  >
+            <table class=" table table-striped table-hover"  >
                 <tr>
                     <th>Indice</th>
                     <th>Nome </th>
@@ -114,9 +114,8 @@
                         </form>
                     </td>
                 </tr>
-                                
+                <%}%>                 
             </table>   
-                <%}%> 
                 
              </div>
     </div>
