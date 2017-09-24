@@ -83,7 +83,7 @@
             
             <h2>Lista</h2>
            
-            <table align="center" border="1" class=" table table-striped" >
+            <table align="center" class=" table table-striped"  >
                 <tr>
                     <th>Indice</th>
                     <th>Nome </th>
