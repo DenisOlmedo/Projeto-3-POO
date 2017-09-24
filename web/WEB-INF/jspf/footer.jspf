@@ -1,13 +1,7 @@
 
 <%@ page pageEncoding="UTF-8" %>
-<div class="navbar navbar-inverse">
-  <div class="navbar-inner">
-    <a class="brand" href="#"></a>
-    <ul class="nav">
-      <li class="active"><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-    </ul>
-  </div>
-</div>
-
+    <footer class="footer" >
+      <div class="container-fluid bg-light " style="text-align: center; color: white; background: black">
+        <span>ADS 4° Ciclo Noturno - 2017 </span>
+      </div>
+    </footer>
