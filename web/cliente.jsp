@@ -51,26 +51,33 @@
       <div class= "jumbotron ">
         <form>
           <fieldset>
-            
-            <h3>Nome :    
-                <input type="text" name="nome" value="" placeholder="Type something…"></h3>
-              <br>
-            <h3>CPF :
-                <input type="text" name="cpf" value="" placeholder="Type something…"> </h3>
-              <br>
-            <h3>RG :
-                <input type="text" name="rg" value="" placeholder="Type something…"></h3>
-            <br>
-            <h3>Email :
-                <input type="text" name="email" value="" placeholder="Type something…"></h3>
-            <br>
-            <h3>Telefone :
-                <input type="text" name="telefone" value="" placeholder="Type something…"></h3>
-            <br>
-            <h3>Endereço :
-                <input type="text" name="endereco" value="" placeholder="Type something…"></h3>
-           
-            <button type="submit" class="btn btn-inverse" name="enviar">Cadastrar</button>
+              <table align = "center">
+                        <tr>
+                            <td><h3>Nome : </h3> </td>  
+                            <td><input type="text" name="nome" value="" placeholder="Type something…"></td>
+                        </tr>
+                        <tr> 
+                            <td><h3>CPF : </h3></td>
+                            <td><input type="text" name="cpf" value="" placeholder="Type something…"> 
+                        </tr>
+                        <tr>
+                            <td><h3>RG : </h3></td>
+                            <td> <input type="text" name="rg" value="" placeholder="Type something…"></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Email : </h3></td>
+                            <td><input type="text" name="email" value="" placeholder="Type something…"></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Telefone : </h3></td>
+                            <td><input type="text" name="telefone" value="" placeholder="Type something…"></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Endereço : </h3></td>
+                            <td><input type="text" name="endereco" value="" placeholder="Type something…"></td>
+                        <tr>
+              </table>
+                    <button type="submit" class="btn btn-inverse" name="enviar">Cadastrar</button>
           </fieldset>
         </form>
             
@@ -110,6 +117,7 @@
                         <form>
                             <input type="hidden" name="i" value="<%=i%>"/>
                             <input type="submit" name="remove" value="Excluir"/>
+                            <input type="submit" name="alterar" value="Excluir"/>
                             
                         </form>
                     </td>
