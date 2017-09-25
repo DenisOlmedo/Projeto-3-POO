@@ -10,15 +10,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+      
     <title>Cliente</title>
     <%@include file="WEB-INF/jspf/header.jspf" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/teste.css" rel="stylesheet" media="screen">
     
   </head>
-  <body>
-      <h1 style="text-align: center">Cadastro Cliente</h1>
+  <body background = "img/tec.jpg">
+      <h1 class="container cant" style="text-align: center ; background: #ccc ">Cadastro Cliente</h1>
+      <br>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
@@ -47,7 +50,7 @@
         }%>
     
     
-    <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
+    <div class="container conteudo cant  " style="text-align: center; background: #ccc ;  ">
       <div class= "jumbotron ">
         <form>
           <fieldset>
@@ -85,7 +88,7 @@
     </div>
     <br>
     <br> 
-        <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
+        <div class="container conteudo cant " style="text-align: center; background: #ccc ;  ">
           <div class= "jumbotron ">
             
             <h2>Lista</h2>

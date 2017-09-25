@@ -9,10 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/teste.css" rel="stylesheet" media="screen">
   </head>
   
-  <body>
-      <h1 style="text-align:center">Cadastro Fornecedor</h1>
+  <body background = "img/tec.jpg">
+      <h1 class="container conteudo cant" style="text-align:center; background: #ccc ;">Cadastro Fornecedor</h1>
+      <br>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
@@ -59,7 +61,7 @@
                 endereco1 = Bancodados.getFornecedor().get(i).getEndereco();
                 Bancodados.getFornecedor().remove(i);
              }%>  
-                <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
+                <div class="container conteudo cant " style="text-align: center; background: #ccc ;  ">
         <div class= "jumbotron ">
         <form>
           <fieldset>
@@ -97,7 +99,7 @@
                 </div>
                             <br><br>
                             
-   <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
+   <div class="container conteudo cant" style="text-align: center; background: #ccc ;  ">
           <div class= "jumbotron ">                         
         
             <h2>Lista</h2>
