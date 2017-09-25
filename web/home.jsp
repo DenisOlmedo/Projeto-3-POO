@@ -1,4 +1,5 @@
 
+<%@page import="br.com.fatecpg.oo.Bancodados"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,6 +12,8 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+    <h2>Quantidade de Clientes cadastrados = <%=Bancodados.getcadastrocliente().size()%></h2>
+    <h2>Quantidade de Fornecedores cadastrados = <%=Bancodados.getFornecedor().size()%> </h2> 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
    <%@include file="WEB-INF/jspf/footer.jspf" %>
