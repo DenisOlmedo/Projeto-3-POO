@@ -12,7 +12,7 @@
   </head>
   
   <body>
-      <h1 style="align-content: center">Cadastro Fornecedor</h1>
+      <h1 style="text-align:center">Cadastro Fornecedor</h1>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
@@ -63,32 +63,45 @@
         <div class= "jumbotron ">
         <form>
           <fieldset>
-            
-            <h3>Nome :    
-                <input type="text" name="nome" value="<%=nome1%>" placeholder="Type something…"></h3>
-              <br>
-            <h3>Razão Social :
-                <input type="text" name="razao" value="<%=razao1%>" placeholder="Type something…"> </h3>
-              <br>
-            <h3>CNPJ :
-                <input type="text" name="cnpj" value="<%=cnpj1%>" placeholder="Type something…"></h3>
-            <br>
-            <h3>Email :
-                <input type="text" name="email" value="<%=email1%>" placeholder="Type something…"></h3>
-            <br>
-            <h3>Telefone :
-                <input type="text" name="telefone" value="<%=telefone1%>" placeholder="Type something…"></h3>
-            <br>
-            <h3>Endereço :
-                <input type="text" name="endereco" value="<%=endereco1%>" placeholder="Type something…"></h3>
-           
-            <button type="submit" name="botao" class="btn btn-inverse">Cadastrar</button>
+              <table align = "center">
+                            <tr>
+                                <td><h3>Nome : </h3> </td>  
+                                <td><input type="text" name="nome" value="<%=nome1%>" placeholder="Type something…"></td>
+                            </tr>
+                            <tr>
+                                <td><h3>Razão Social :</h3> </td>
+                                <td> <input type="text" name="razao" value="<%=razao1%>" placeholder="Type something…"> </td>
+                            </tr>
+                            <tr>
+                                <td><h3>CNPJ :</h3></td>
+                                <td> <input type="text" name="cnpj" value="<%=cnpj1%>" placeholder="Type something…"></td>
+                            </tr>
+                            <tr>
+                                <td><h3>Email :</h3></td>
+                                <td><input type="text" name="email" value="<%=email1%>" placeholder="Type something…"></td>
+                            </tr>
+                            <tr>
+                                <td><h3>Telefone :</h3></td>
+                                <td><input type="text" name="telefone" value="<%=telefone1%>" placeholder="Type something…"></td>
+                            </tr>
+                            <tr>
+                                <td><h3>Endereço :</h3></td>
+                                <td><input type="text" name="endereco" value="<%=endereco1%>" placeholder="Type something…"></td>
+                            </tr>
+              </table>
+                        <button type="submit" name="botao" class="btn btn-inverse">Cadastrar</button>
              
           </fieldset>
         </form>
+        </div>
+                </div>
+                            <br><br>
+                            
+   <div class="container conteudo " style="text-align: center; background: #ccc ;  ">
+          <div class= "jumbotron ">                         
         
             <h2>Lista</h2>
-        <table class="table table-hover table-stripped">
+        <table class="table table-striped table-hover">
             <tr>
                 
                 <th>Nome</th>
@@ -127,7 +140,7 @@
             <%}catch(Exception ex){%>
             <div>Erro ao Processar o comando: <%=ex.getMessage()%></div>
         <%}%>
-    
+        
     <%@include file="WEB-INF/jspf/footer.jspf" %>
   </body>
 </html>
