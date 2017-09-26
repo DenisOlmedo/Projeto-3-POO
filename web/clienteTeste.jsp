@@ -2,6 +2,9 @@
     Página teste para o hashmap
 --%>
 
+<%@page import="java.util.Set"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
 <%@page import="br.com.fatecpg.oo.Cliente"%>
 <%@page import="app.BdHm"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -24,6 +27,7 @@
     <script src="js/bootstrap.min.js"></script>
     
      <%try{
+         int codigo = 0;
          if (request.getParameter("enviar")!=null){
             String nome= request.getParameter("nome");
             String cpf= request.getParameter("cpf");
@@ -40,7 +44,7 @@
             o.setTelefone(telefone);
             o.setEndereco(endereco);
             
-            BdHm.getCliente().put(key, o);
+            BdHm.getCliente().put(Integer.parseInt(request.getParameter("codigo")), o);
             
          }else if(request.getParameter("remove")!=null){
              int i=Integer.parseInt(request.getParameter("i"));
@@ -54,6 +58,10 @@
         <form>
           <fieldset>
               <table align = "center">
+                        <tr>
+                            <td><h3>Código: </h3> </td>  
+                            <input type="text" name="ind" value="<%=codigo+1%>"/>
+                        </tr>
                         <tr>
                             <td><h3>Nome : </h3> </td>  
                             <td><input type="text" name="nome" value="" placeholder="Type something…"></td>
@@ -82,13 +90,13 @@
                     <button type="submit" class="btn btn-inverse" name="enviar">Cadastrar</button>
           </fieldset>
         </form>
-            
+        <%if (BdHm.getCliente().size()>0){%>
       </div>
     </div>
     <br>
     <br> 
         <div class="container conteudo cant " style="text-align: center; background: #ccc ;  ">
-          <div class= "jumbotron ">
+          
             
             <h2>Lista</h2>
            
@@ -103,11 +111,14 @@
                     <th>Endereço</th>
                     <th>Exclusao</th>
                 </tr>
-                                                
-                <% for(int i=0; i<BdHm.getCliente().size();i++){ %>
-                <% Cliente o = BdHm.getCliente().get(i);%>
+                
+                <%Set<Integer> chaves = BdHm.getCliente().keySet();
+		for (Integer chave : chaves)
+		{
+			if(chave != null){
+                    Cliente o = BdHm.getCliente().get(chave);%>
                 <tr>
-                    <td><%=i%></td>
+                    <td><%=chave%></td>
                     <td><%=o.getNome()%></td>
                     <td><%=o.getCpf()%></td>
                     <td><%=o.getRg()%></td>
@@ -117,20 +128,19 @@
                     
                     <td>
                         <form>
-                            <input type="hidden" name="i" value="<%=i%>"/>
-                            <input type="submit" name="remove" value="Excluir"/>
-                            <input type="submit" name="alterar" value="Excluir"/>
+                            <input type="hidden" name="i" value="<%=chave%>"/>
+                            <input type="submit" name="remove" value="Excluir"></td>
+                            <input type="submit" name="alterar" value="Editar"/>
                             
                         </form>
                     </td>
-                </tr>
-                <%}%>                 
+                </tr>                
             </table>   
                 
-             </div>
+             
     </div>
-                <%}catch(Exception ex){%>
-            <div>Erro ao Processar o comando: <%=ex.getMessage()%></div>
+                <%}}}}catch(Exception ex){%>
+            <h2>Erro ao Processar o comando: <%=ex.getMessage()%></h2>
         <%}%>
     
     <%@include file="WEB-INF/jspf/footer.jspf" %>
