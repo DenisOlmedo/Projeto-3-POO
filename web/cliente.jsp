@@ -26,6 +26,15 @@
     <script src="js/bootstrap.min.js"></script>
     
      <%try{
+        String nome1="";
+        String cpf1 = "";
+        String rg1="";
+        String email1="";
+        String telefone1="";
+        String endereco1="";
+         
+         
+         
          if (request.getParameter("enviar")!=null){
             String nome= request.getParameter("nome");
             String cpf= request.getParameter("cpf");
@@ -47,7 +56,19 @@
          }else if(request.getParameter("remove")!=null){
              int i=Integer.parseInt(request.getParameter("i"));
             Bancodados.getcadastrocliente().remove(i);
-        }%>
+        } else if (request.getParameter("alterar")!=null){
+          int i= Integer.parseInt(request.getParameter("i"));
+                nome1 = Bancodados.getcadastrocliente().get(i).getNome();
+                cpf1 = Bancodados.getcadastrocliente().get(i).getCpf();
+                rg1 = Bancodados.getcadastrocliente().get(i).getRg();
+                email1 = Bancodados.getcadastrocliente().get(i).getEmail();
+                telefone1 = Bancodados.getcadastrocliente().get(i).getTelefone();
+                endereco1 = Bancodados.getcadastrocliente().get(i).getEndereco();
+                Bancodados.getcadastrocliente().remove(i);
+        
+        }
+          
+     %>
     
     
     <div class="container conteudo cant  " style="text-align: center; background: #ccc ;  ">
@@ -102,7 +123,7 @@
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Endereço</th>
-                    <th>Exclusao</th>
+                    <th>Exclusão/Alteração</th>
                 </tr>
                                                 
                 <% for(int i=0; i<Bancodados.getcadastrocliente().size();i++){ %>
@@ -120,7 +141,7 @@
                         <form>
                             <input type="hidden" name="i" value="<%=i%>"/>
                             <input type="submit" name="remove" value="Excluir"/>
-                            <input type="submit" name="alterar" value="Excluir"/>
+                            <input type="submit" name="alterar" value="Alterar"/>
                             
                         </form>
                     </td>
