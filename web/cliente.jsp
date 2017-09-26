@@ -57,27 +57,27 @@
               <table align = "center">
                         <tr>
                             <td><h3>Nome : </h3> </td>  
-                            <td><input type="text" name="nome" value="" placeholder="Type something…"></td>
+                            <td><input type="text" name="nome" value="" placeholder="Nome Sobrenome" pattern="[a-z A-Z]{5,}"></td>
                         </tr>
                         <tr> 
                             <td><h3>CPF : </h3></td>
-                            <td><input type="text" name="cpf" value="" placeholder="Type something…"> 
+                            <td><input type="text" name="cpf" value="" placeholder="12345678900" pattern="[0-9]{11}"></td>
                         </tr>
                         <tr>
                             <td><h3>RG : </h3></td>
-                            <td> <input type="text" name="rg" value="" placeholder="Type something…"></td>
+                            <td><input type="text" name="rg" value="" placeholder="12345678x" pattern="[0-9]{8}[xX0-9]{1}"></td>
                         </tr>
                         <tr>
                             <td><h3>Email : </h3></td>
-                            <td><input type="text" name="email" value="" placeholder="Type something…"></td>
+                            <td><input type="text" name="email" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="example@email.com"></td>
                         </tr>
                         <tr>
                             <td><h3>Telefone : </h3></td>
-                            <td><input type="text" name="telefone" value="" placeholder="Type something…"></td>
+                            <td><input type="text" name="telefone" value="" placeholder="1399996666" pattern="[0-9]{10,11}"></td>
                         </tr>
                         <tr>
                             <td><h3>Endereço : </h3></td>
-                            <td><input type="text" name="endereco" value="" placeholder="Type something…"></td>
+                            <td><input type="text" name="endereco" value="" placeholder="Rua A 123" pattern="[a-zA-Z 0-9]{7,}"></td>
                         <tr>
               </table>
                     <button type="submit" class="btn btn-inverse" name="enviar">Cadastrar</button>
