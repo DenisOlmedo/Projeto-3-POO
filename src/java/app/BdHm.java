@@ -1,4 +1,4 @@
-// Página onde será feito o HashMap
+
 package app;
 
 import br.com.fatecpg.oo.Cliente;
@@ -7,15 +7,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BdHm {
-    private static HashMap<Integer,Cliente> cliente;
-    public static HashMap<Integer,Cliente> getCliente(){
-        if (cliente==null) cliente=new HashMap<>();
+    private static int initialSize = 16;
+               
+    private static double loadFactor = 0.75;
+    
+    private static double sizeToRefresh = initialSize * loadFactor;
+    
+    private static Map<Integer,Cliente> cliente;
+    public static Map<Integer,Cliente> getCliente(){
+        if (cliente==null) cliente = new HashMap<Integer,Cliente>();
         return cliente;
     }
-    private static HashMap<Integer,Fornecedor> fornecedor;
-    public static HashMap<Integer,Fornecedor> getFornecedor(){
-        if (fornecedor==null) fornecedor=new HashMap<>();
+    private static Map<Integer,Fornecedor> fornecedor;
+    public static Map<Integer,Fornecedor> getFornecedor(){
+        if (fornecedor==null) fornecedor = new HashMap<Integer,Fornecedor>();
         return fornecedor;
     }
-    
 }
