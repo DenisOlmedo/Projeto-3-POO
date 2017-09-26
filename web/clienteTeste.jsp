@@ -1,6 +1,3 @@
-<%-- 
-    Página teste para o hashmap
---%>
 
 <%@page import="java.util.Set"%>
 <%@page import="java.util.HashMap"%>
