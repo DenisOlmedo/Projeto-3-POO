@@ -71,7 +71,7 @@
               <table align = "center" style="text-align: left">
                             <tr>
                                 <td><h3>Nome : </h3> </td>  
-                                <td><input class="input-block-level" type="text" name="nome" value="" placeholder="Nome Sobrenome" pattern="[a-z A-Z]{5,}"></td>
+                                <td><input class="input-block-level" type="text" name="nome" value="<%=nome1%>" placeholder="Nome Sobrenome" pattern="[a-z A-Z]{5,}"></td>
                             </tr>
                             <tr>
                                 <td><h3>Razão Social :</h3> </td>
@@ -83,15 +83,15 @@
                             </tr>
                             <tr>
                                 <td><h3>Email :</h3></td>
-                                <td><input class="input-block-level" type="text" name="email" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="example@email.com"></td>
+                                <td><input class="input-block-level" type="text" name="email" value="<%=email1%>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="example@email.com"></td>
                             </tr>
                             <tr>
                                 <td><h3>Telefone :</h3></td>
-                                <td><input class="input-block-level" type="text" name="telefone" value="" placeholder="1399996666" pattern="[0-9]{10,11}"></td>
+                                <td><input class="input-block-level" type="text" name="telefone" value="<%=telefone1%>" placeholder="1399996666" pattern="[0-9]{10,11}"></td>
                             </tr>
                             <tr>
                                 <td><h3>Endereço :</h3></td>
-                                <td><input class="input-block-level" type="text" name="endereco" value="" placeholder="Rua A 123" pattern="[a-zA-Z 0-9]{7,}"></td>
+                                <td><input class="input-block-level" type="text" name="endereco" value="<%=endereco1%>" placeholder="Rua A 123" pattern="[a-zA-Z 0-9]{7,}"></td>
                             </tr>
               </table>
                         <button type="submit" name="botao" class="btn btn-inverse">Cadastrar</button>
