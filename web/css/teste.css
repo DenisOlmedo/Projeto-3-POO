@@ -9,6 +9,7 @@ and open the template in the editor.
 */
 
 .cant {
+border: 1px solid;
 background:#333;
 width:1200px;
 margin: auto;
@@ -18,4 +19,24 @@ text-align:center;
 -moz-border-radius:7px;
 -webkit-border-radius:7px;
  border-radius:7px;
+}
+.div2 {
+border: 1px solid;
+background:#333;
+width:400px;
+margin: auto;
+padding:10px;
+text-align:center;
+ 
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+ border-radius:7px;
+}
+
+.cent {
+    width: 1000px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+        
 }

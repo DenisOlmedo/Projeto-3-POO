@@ -71,7 +71,7 @@
      %>
     
     
-    <div class="container conteudo cant  " style="text-align: center; background: #ccc ;  ">
+    <div class="container conteudo cant " style="text-align: center; background: #ccc ;  ">
       <div class= "jumbotron ">
         <form>
           <fieldset>
