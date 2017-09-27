@@ -50,7 +50,7 @@
                  fornecedor.setTelefone(telefone);
                  fornecedor.setEndereco(endereco);
                  Bancodados.getFornecedor().add(fornecedor);
-                 }
+                 }else{%><div class="alert-dismissable alert-danger cent"><h4>Erro - CNPJ ja Cadastrado</h4><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div><%}
              }else if(request.getParameter("remove")!=null){
                 int i = Integer.parseInt(request.getParameter("i"));
                 Bancodados.getFornecedor().remove(i);

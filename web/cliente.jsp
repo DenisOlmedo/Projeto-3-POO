@@ -11,6 +11,7 @@
 <html>
   <head>
       
+
     <title>Cliente</title>
     <%@include file="WEB-INF/jspf/header.jspf" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
     <link href="css/teste.css" rel="stylesheet" media="screen">
     
   </head>
+  
   <body background = "img/fundo.jpg">
       <h1 class="container cant" style="text-align: center ; background: #ccc ">Cadastro Cliente</h1>
       <br>
@@ -53,7 +55,7 @@
             o.setTelefone(telefone);
             o.setEndereco(endereco);
             
-            Bancodados.getcadastrocliente().add(o); }
+            Bancodados.getcadastrocliente().add(o); }else{%><div class="alert-dismissable alert-danger cent"><h4>Erro - CPF ja Cadastrado</h4><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div><%}
             
          }else if(request.getParameter("remove")!=null){
              int i=Integer.parseInt(request.getParameter("i"));
