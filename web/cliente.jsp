@@ -131,7 +131,7 @@
                 <% for(int i=0; i<Bancodados.getcadastrocliente().size();i++){ %>
                 <% Cliente o = Bancodados.getcadastrocliente().get(i);%>
                 <tr>
-                    <td><%=i%></td>
+                    <td><%=i+1%></td>
                     <td><%=o.getNome()%></td>
                     <td><%=o.getCpf()%></td>
                     <td><%=o.getRg()%></td>

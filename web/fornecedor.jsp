@@ -109,6 +109,7 @@
         <table class="table table-striped table-hover">
             <tr>
                 
+                <th>Indice</th>
                 <th>Nome</th>
                 <th>Razao Social</th>
                 <th>CNPJ</th>
@@ -121,6 +122,7 @@
             <%for(int i=0; i<Bancodados.getFornecedor().size();i++){
                 Fornecedor fornecedor = Bancodados.getFornecedor().get(i);%>
                 <tr>
+                    <td><%=i+1%></td>
                     <td><%=fornecedor.getNome()%></td>
                     <td><%=fornecedor.getRazaosocial()%></td>
                     <td><%=fornecedor.getCnpj()%></td>
