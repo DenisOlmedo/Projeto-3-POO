@@ -43,7 +43,7 @@
             String email= request.getParameter("email");
             String telefone= request.getParameter("telefone");
             String endereco= request.getParameter("endereco");
-            verif = Bancodados.ErroDuploReg(cpf);
+            verif = Bancodados.ErroDuploRegCliente(cpf);
             if(verif == true){
             Cliente o= new Cliente();
             o.setNome(nome);

@@ -31,7 +31,7 @@
         String email1="";
         String telefone1="";
         String endereco1="";
-        
+        boolean verif;
              if(request.getParameter("botao")!=null){
                  
                  String nome = request.getParameter("nome");
@@ -40,6 +40,8 @@
                  String email = request.getParameter("email");
                  String telefone = request.getParameter("telefone");
                  String endereco = request.getParameter("endereco");
+                 verif = Bancodados.ErroDuploRegFornecedor(cnpj);
+                 if(verif == true){
                  Fornecedor fornecedor = new Fornecedor();
                  fornecedor.setNome(nome);
                  fornecedor.setRazaosocial (razao);
@@ -48,6 +50,7 @@
                  fornecedor.setTelefone(telefone);
                  fornecedor.setEndereco(endereco);
                  Bancodados.getFornecedor().add(fornecedor);
+                 }
              }else if(request.getParameter("remove")!=null){
                 int i = Integer.parseInt(request.getParameter("i"));
                 Bancodados.getFornecedor().remove(i);

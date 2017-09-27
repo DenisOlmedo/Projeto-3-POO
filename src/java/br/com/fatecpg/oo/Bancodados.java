@@ -31,9 +31,8 @@ public class Bancodados {
         return fornecedores;
     }
     
-    public static boolean ErroDuploReg (String cod){
+    public static boolean ErroDuploRegCliente (String cod){
      int cont = 0 ;
-     String tx ;
      for(int i=0; i<Bancodados.getcadastrocliente().size();i++){
          
          if(cadastrocliente.get(i).getCpf() == null ? cod == null : cadastrocliente.get(i).getCpf().equals(cod)){
@@ -42,6 +41,22 @@ public class Bancodados {
         
      }
         if (cont == 1){
+            return false ;
+        }
+        else{
+            return true ;
+        }
+    }
+    public static boolean ErroDuploRegFornecedor (String cod1){
+     int cont1 = 0 ;
+     for(int x=0; x<Bancodados.getFornecedor().size();x++){
+         
+         if(fornecedores.get(x).getCnpj()== null ? cod1 == null : fornecedores.get(x).getCnpj().equals(cod1)){
+             cont1 = 1;
+         }
+        
+     }
+        if (cont1 == 1){
             return false ;
         }
         else{
