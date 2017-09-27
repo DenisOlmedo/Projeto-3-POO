@@ -23,7 +23,7 @@
     
     
     
-    <%try{
+   <% try{
         
         String nome1="";
         String razao1 = "";
@@ -32,8 +32,9 @@
         String telefone1="";
         String endereco1="";
         boolean verif;
+       
              if(request.getParameter("botao")!=null){
-                 
+                
                  String nome = request.getParameter("nome");
                  String razao = request.getParameter("razao");
                  String cnpj = request.getParameter("cnpj");
@@ -50,6 +51,7 @@
                  fornecedor.setTelefone(telefone);
                  fornecedor.setEndereco(endereco);
                  Bancodados.getFornecedor().add(fornecedor);
+                 
                  }else{%><div class="alert-dismissable alert-danger cent"><h4>Erro - CNPJ ja Cadastrado</h4><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div><%}
              }else if(request.getParameter("remove")!=null){
                 int i = Integer.parseInt(request.getParameter("i"));
@@ -63,7 +65,9 @@
                 telefone1 = Bancodados.getFornecedor().get(i).getTelefone();
                 endereco1 = Bancodados.getFornecedor().get(i).getEndereco();
                 Bancodados.getFornecedor().remove(i);
-             }%>  
+
+                
+}%>
                 <div class="container conteudo cant " style="text-align: center; background: #ccc ;  ">
         <div class= "jumbotron ">
         <form>
@@ -71,27 +75,27 @@
               <table align = "center" style="text-align: left">
                             <tr>
                                 <td><h3>Nome : </h3> </td>  
-                                <td><input class="input-block-level" type="text" name="nome" value="<%=nome1%>" placeholder="Nome Sobrenome" pattern="[a-z A-Z]{5,}"></td>
+                                <td><input class="input-block-level" type="text" name="nome" value="<%=nome1%>" placeholder="Nome Sobrenome" pattern="[a-z A-Z]{5,}" required></td>
                             </tr>
                             <tr>
                                 <td><h3>Razão Social :</h3> </td>
-                                <td> <input class="input-block-level" type="text" name="razao" value="<%=razao1%>" placeholder="Nome Razão Social" pattern="[a-z A-Z]{5,}" > </td>
+                                <td> <input class="input-block-level" type="text" name="razao" value="<%=razao1%>" placeholder="Nome Razão Social" pattern="[a-z A-Z]{5,}" required> </td>
                             </tr>
                             <tr>
                                 <td><h3>CNPJ :</h3></td>
-                                <td> <input class="input-block-level" type="text" name="cnpj" value="<%=cnpj1%>" placeholder="12345678912347" pattern="[0-9]{14}"></td>
+                                <td> <input class="input-block-level" type="text" name="cnpj" value="<%=cnpj1%>" placeholder="12345678912347" pattern="[0-9]{14}" required></td>
                             </tr>
                             <tr>
                                 <td><h3>Email :</h3></td>
-                                <td><input class="input-block-level" type="text" name="email" value="<%=email1%>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="example@email.com"></td>
+                                <td><input class="input-block-level" type="text" name="email" value="<%=email1%>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="example@email.com" required></td>
                             </tr>
                             <tr>
                                 <td><h3>Telefone :</h3></td>
-                                <td><input class="input-block-level" type="text" name="telefone" value="<%=telefone1%>" placeholder="1399996666" pattern="[0-9]{10,11}"></td>
+                                <td><input class="input-block-level" type="text" name="telefone" value="<%=telefone1%>" placeholder="1399996666" pattern="[0-9]{10,11}" required></td>
                             </tr>
                             <tr>
                                 <td><h3>Endereço :</h3></td>
-                                <td><input class="input-block-level" type="text" name="endereco" value="<%=endereco1%>" placeholder="Rua A 123" pattern="[a-zA-Z 0-9]{7,}"></td>
+                                <td><input class="input-block-level" type="text" name="endereco" value="<%=endereco1%>" placeholder="Rua A 123" pattern="[a-zA-Z 0-9]{7,}" required></td>
                             </tr>
               </table>
                         <button type="submit" name="botao" class="btn btn-inverse">Cadastrar</button>
@@ -101,7 +105,7 @@
         </div>
                 </div>
                             <br><br>
-                            
+                           
    <div class="container conteudo cant" style="text-align: center; background: #ccc ;  ">
           <div class= "jumbotron ">                         
         
@@ -145,7 +149,7 @@
     <br>
     <br>
             <%}catch(Exception ex){%>
-            <div>Erro ao Processar o comando: <%=ex.getMessage()%></div>
+            <div><H2>Erro ao Processar o comando: <%=ex.getMessage()%></H2></div>
         <%}%>
         
     <%@include file="WEB-INF/jspf/footer.jspf" %>
