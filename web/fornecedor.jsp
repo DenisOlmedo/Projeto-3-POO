@@ -75,11 +75,11 @@
                             </tr>
                             <tr>
                                 <td><h3>Razão Social :</h3> </td>
-                                <td> <input class="input-block-level" type="text" name="razao" value="<%=razao1%>" placeholder="Type something…"> </td>
+                                <td> <input class="input-block-level" type="text" name="razao" value="<%=razao1%>" placeholder="Nome Razão Social" pattern="[a-z A-Z]{5,}" > </td>
                             </tr>
                             <tr>
                                 <td><h3>CNPJ :</h3></td>
-                                <td> <input class="input-block-level" type="text" name="cnpj" value="<%=cnpj1%>" placeholder="Type something…"></td>
+                                <td> <input class="input-block-level" type="text" name="cnpj" value="<%=cnpj1%>" placeholder="12345678912347" pattern="[0-9]{14}"></td>
                             </tr>
                             <tr>
                                 <td><h3>Email :</h3></td>
