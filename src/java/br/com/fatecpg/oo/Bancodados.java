@@ -30,4 +30,22 @@ public class Bancodados {
         }
         return fornecedores;
     }
+    
+    public static boolean ErroDuploReg (String cod){
+     int cont = 0 ;
+     String tx ;
+     for(int i=0; i<Bancodados.getcadastrocliente().size();i++){
+         
+         if(cadastrocliente.get(i).getCpf() == null ? cod == null : cadastrocliente.get(i).getCpf().equals(cod)){
+             cont = 1;
+         }
+        
+     }
+        if (cont == 1){
+            return false ;
+        }
+        else{
+            return true ;
+        }
+    }
 }

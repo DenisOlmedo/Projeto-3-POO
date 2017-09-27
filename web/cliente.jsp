@@ -32,17 +32,19 @@
         String email1="";
         String telefone1="";
         String endereco1="";
-         
+         boolean verif ;
          
          
          if (request.getParameter("enviar")!=null){
+             
             String nome= request.getParameter("nome");
             String cpf= request.getParameter("cpf");
             String rg= request.getParameter("rg");
             String email= request.getParameter("email");
             String telefone= request.getParameter("telefone");
             String endereco= request.getParameter("endereco");
-            
+            verif = Bancodados.ErroDuploReg(cpf);
+            if(verif == true){
             Cliente o= new Cliente();
             o.setNome(nome);
             o.setCpf(cpf);
@@ -51,7 +53,7 @@
             o.setTelefone(telefone);
             o.setEndereco(endereco);
             
-            Bancodados.getcadastrocliente().add(o);
+            Bancodados.getcadastrocliente().add(o); }
             
          }else if(request.getParameter("remove")!=null){
              int i=Integer.parseInt(request.getParameter("i"));
